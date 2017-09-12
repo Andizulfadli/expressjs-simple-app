@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><% include partials/page/head.ejs %></head>
+  <body class="<%= classname %>">
+
+    <% include partials/page/header.ejs %>
+    <div class="container">
+        <h1><%= pagetitle %> <%= title %></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique nibh eu turpis lacinia, at luctus mi tristique. Vestibulum et sagittis sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed aliquet in nulla vitae viverra. Mauris ut bibendum sem, vitae lacinia arcu. Fusce dignissim lorem ac magna feugiat, sed volutpat mauris faucibus. Etiam dui lectus, aliquet sed aliquet sit amet, pellentesque non dolor. Cras faucibus ultrices sem, id bibendum lectus pellentesque id. Donec tristique interdum porta. Aliquam venenatis nunc vitae purus volutpat sollicitudin. Curabitur eu cursus enim, ut bibendum odio. Nullam nec ultrices felis. Curabitur eleifend lectus finibus lectus posuere, eu vulputate tellus convallis. Nulla hendrerit tempus cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+        <%  // cek apakah array users exsits
+            if(typeof(users) !== 'undefined') { %>
+            <ul>
+                <% for(var i=0; i<users.length; i++){ %>
+                    <li><%= users[i] %></li>
+                <% } %>
+            </ul>
+        <% } %>
+    </div>
+    
+    <% include partials/page/footer.ejs %>
+    <% include partials/page/jsdefaults.ejs %>
+  </body>
+</html>

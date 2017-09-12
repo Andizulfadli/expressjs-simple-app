@@ -1,3 +1,6 @@
+learning/node_modules/*
+rouxmeet/node_modules/*
+
 # Logs
 logs
 *.log
